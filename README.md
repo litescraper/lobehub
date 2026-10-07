@@ -68,6 +68,7 @@ You stay in charge — without staying online.
 - [🤝 Contributing](#-contributing)
 - [❤️ Sponsor](#️-sponsor)
 - [🔗 More Products](#-more-products)
+- [Search endpoint configuration](#search-endpoint-configuration)
 
 ####
 
@@ -488,6 +489,10 @@ Copyright © 2026 [LobeHub][profile-link]. <br />
 This project is [LobeHub Community License](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
+
+## Search endpoint configuration
+
+Set `SEARCH_PROVIDERS=litescrape` and `LITESCRAPE_API_KEY` to use the provider for built-in web search. Set `LITESCRAPE_BASE_URL` to override its API base URL. Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 [blog]: https://lobehub.com/blog

@@ -6,6 +6,7 @@ import { FirecrawlImpl } from './firecrawl';
 import { GoogleImpl } from './google';
 import { JinaImpl } from './jina';
 import { KagiImpl } from './kagi';
+import { LitescrapeImpl } from './litescrape';
 import { Search1APIImpl } from './search1api';
 import { SearXNGImpl } from './searxng';
 import { TavilyImpl } from './tavily';
@@ -23,6 +24,7 @@ export enum SearchImplType {
   Google = 'google',
   Jina = 'jina',
   Kagi = 'kagi',
+  Litescrape = 'litescrape',
   Search1API = 'search1api',
   SearXNG = 'searxng',
   Tavily = 'tavily',
@@ -65,6 +67,10 @@ export const createSearchServiceImpl = (
 
     case SearchImplType.Kagi: {
       return new KagiImpl();
+    }
+
+    case SearchImplType.Litescrape: {
+      return new LitescrapeImpl();
     }
 
     case SearchImplType.SearXNG: {
