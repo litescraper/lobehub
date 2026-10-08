@@ -8,6 +8,7 @@ import { JinaImpl } from './jina';
 import { KagiImpl } from './kagi';
 import { Search1APIImpl } from './search1api';
 import { SearXNGImpl } from './searxng';
+import { SerperImpl } from './serper';
 import { TavilyImpl } from './tavily';
 import { type SearchServiceImpl } from './type';
 
@@ -25,6 +26,7 @@ export enum SearchImplType {
   Kagi = 'kagi',
   Search1API = 'search1api',
   SearXNG = 'searxng',
+  Serper = 'serper',
   Tavily = 'tavily',
 }
 
@@ -65,6 +67,10 @@ export const createSearchServiceImpl = (
 
     case SearchImplType.Kagi: {
       return new KagiImpl();
+    }
+
+    case SearchImplType.Serper: {
+      return new SerperImpl();
     }
 
     case SearchImplType.SearXNG: {
